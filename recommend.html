@@ -1,0 +1,41 @@
+{% extends 'a.html' %}
+
+{% block recommend %}
+
+   <h2> Review given by user : 1 </h2>
+     <div>
+      <table class="table table-striped border">
+        <tr><th>Movie Id</th>
+            <th>Movie Name</th>
+            <th>Genre</th>
+            <th>Rating</th>
+        </tr>
+          {% for movies in reviewed_movies %}
+             <tr>
+                 {% for movie in movies %}
+                 <td> {{ movie }} </td>
+                 {% endfor %}
+             </tr>
+          {% endfor %}
+      </table>
+    </div>
+
+<h2> Recommended Movies  </h2>
+     <div>
+      <table class="table table-striped border">
+        <tr><th>Movie Id</th>
+            <th>Movie Name</th>
+            <th>Genre</th>
+            <th>Rating</th>
+        </tr>
+          {% for movies in recMovies %}
+             <tr>
+                 {% for movie in movies %}
+                 <td> {{ movie }} </td>
+                 {% endfor %}
+             </tr>
+          {% endfor %}
+      </table>
+    </div>
+
+{% endblock %}
